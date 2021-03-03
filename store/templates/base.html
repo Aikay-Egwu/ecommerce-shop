@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Tailwind CSS Skeleton</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	</head>
+
+	<body class="">
+	<nav class="bg-gray-100">
+  <div class="max-w-6xl px-4 mx-auto hover:text-gray-800 ">
+    <div class="flex justify-between items-center">
+      <!-- left side -->
+      <div class="flex space-x-2">
+        <!-- logo -->
+          <div>
+            <a href="#" class="flex items-center py-4 px-3">
+              <svg class="h-5 w-6 mr-2 text-red-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
+</svg><span>Tna Navs</span>
+            </a>
+          </div>
+        <!-- primary nav-->
+          <div class="hidden md:flex flex items-center space-x-3">
+            <a href="" class="py-4 px-3 text-gray-700">Features</a>
+            <a href="" class="py-4 px-3 text-gray-700">Pricing</a>
+          </div>
+        <!-- secondary nav -->
+      </div>
+      <!-- right side -->
+      <div class="hidden md:flex items-center space-x-3">
+				<a href="/cart">
+					<img src="{% static 'images/cart.png' %}" class="h-8"/>
+				</a> <span>0</span>
+        {% comment %} <a href="" class="py-4 px-3 text-gray-700 hover:text-gray-900">Login</a>
+        <a href="" class="py-3 px-3 text-gray-700 text-yellow-900 bg-yellow-400 rounded hover:text-gray-900">Signup</a> {% endcomment %}
+      </div>
+<!--mobile menu -->
+      <div class="flex md:hidden">
+        <button class="mobile-menu-button">
+          <svg class="w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+        </button>
+      </div>
+      </div>
+  </div>
+  <!-- Mobile Menu goes here -->
+  <div class="mobile-menu hidden md:hidden">
+    <a href="#" class="block py-4 px-10 text-sm hover:bg-gray-200">Features</a>
+    <a href="#" class="block py-4 px-10 text-sm hover:bg-gray-200">Pricing</a>
+    <a href="#" class="block py-4 px-10 text-sm hover:bg-gray-200">Login</a>
+    <a href="#" class="block py-4 px-10 text-sm hover:bg-gray-200">Signup</a>
+  </div>
+</nav>
+<!--content goes here -->
+	<div class="container mx-auto">
+		{% block content %}
+		
+		{% endblock  %}
+	</div>
+		
+	</body>
+
+</html>
